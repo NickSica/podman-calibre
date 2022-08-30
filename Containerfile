@@ -7,6 +7,6 @@ RUN cd tmp && \
 
 ENV XDG_CONFIG_HOME=/config
 
-ENTRYPOINT calibre-server --port=8788 --enable-auth --enable-local-write /books
+ENTRYPOINT calibre-server --port=8788 --auth-mode=basic --enable-auth --enable-local-write /books
 EXPOSE 8788
 VOLUME /config
